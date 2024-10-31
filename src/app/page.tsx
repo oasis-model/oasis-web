@@ -207,17 +207,45 @@ export default function Home() {
         <Image src="/sohu.png" alt="Performance" width={500} height={500} />
         </section>
 
-        <h2 className="text-2xl font-bold text-center mt-8">Future Work</h2>
+        <h2 className="text-2xl font-bold text-center mt-8">Future Explorations</h2>
 
-        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
-        <ul className="list-disc list-inside">
-          <li>Creating and editing game content on-the-fly, even while playing, through text and image prompting</li>
-          <li>Generating content individually tailored for each user on social media</li>
-          <li>Real-time medical care, able to respond on the fly to patients in a video call</li>
-          <li>AI teachers, who can generate videos to respond to students in a classroom</li>
-        </ul>
-        <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
-        <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
+        <p className="text-justify leading-relaxed"> With the many exciting results, there come areas for future development in the model. There are difficulties with the sometimes fuzzy video in the distance, the temporal consistency of uncertain objects, domain generalization, and difficulties over long contexts.</p>
+
+        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
+          <Carousel className="w-full" opts={{
+            loop: true
+          }}>
+            <CarouselContent>
+              {[
+                {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
+                {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
+                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
+                {src: "/2.webp", caption: "Interactive crafting system"},
+                {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
+              ].map((item, index) => (
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                  <div className="flex flex-col items-center justify-center">
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                    <p className="text-sm text-center p-2">{item.caption}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <h2 className="text-2xl font-bold text-center mt-8">What&apos;s Next?</h2>
+
       </div>
 
       
