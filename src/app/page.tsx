@@ -79,7 +79,7 @@ export default function Home() {
           </a>
           <a
             className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center gap-2 hover:bg-[#ccc] dark:hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href=""
+            href="https://github.com/etched-ai/open-oasis"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -92,7 +92,21 @@ export default function Home() {
             />
             View code
           </a>
-
+          <a
+            className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center gap-2 hover:bg-[#ccc] dark:hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="https://huggingface.co/Etched/oasis-500m"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/hf-logo.svg"
+              alt="HuggingFace"
+              width={20}
+              height={20}
+            />
+            Model weights
+          </a>
           <a
             className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center gap-2 hover:bg-[#ccc] dark:hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
             href=""
@@ -139,7 +153,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <p className="text-justify leading-relaxed">Our model even understands complex game mechanics, such as building, lighting physics, inventory management, object understanding, and more.</p>
+        <p className="text-justify leading-relaxed">Oasis understands complex game mechanics, such as building, lighting physics, inventory management, object understanding, and more.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
           <Carousel className="w-full" opts={{ loop: true }}>
@@ -175,7 +189,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <p className="text-justify leading-relaxed">Oasis outputs a diverse range of settings, locations, and objects.</p>
+        <p className="text-justify leading-relaxed">Oasis outputs a diverse range of settings, locations, and objects. This versatility gives us confidence that Oasis can be adapted to generate a wide range of new maps, games, features, and modifications with limited additional training.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
           <Carousel className="w-full" opts={{ loop: true }}>
@@ -259,7 +273,7 @@ export default function Home() {
           
         <h2 className="text-2xl font-bold text-center mt-8">Performance</h2>
 
-        <p className="text-justify leading-relaxed">Oasis generates real-time output in 24 frames per second. Current state-of-the-art text-to-video models with a similar DiT architecture (e.g. Sora<sup className="text-gray-500">[3]</sup>, Mochi-1<sup className="text-gray-500">[6]</sup> and Runway<sup className="text-gray-500">[7]</sup>) can take 10-20 seconds to create just one second of video, even on multiple GPUs. In order to match the experience of playing a game, however, our model must generate a new frame every 0.04 seconds, which is over 100x faster.</p>
+        <p className="text-justify leading-relaxed">Oasis generates real-time output in 20 frames per second. Current state-of-the-art text-to-video models with a similar DiT architecture (e.g. Sora<sup className="text-gray-500">[3]</sup>, Mochi-1<sup className="text-gray-500">[6]</sup> and Runway<sup className="text-gray-500">[7]</sup>) can take 10-20 seconds to create just one second of video, even on multiple GPUs. In order to match the experience of playing a game, however, our model must generate a new frame every 0.04 seconds, which is over 100x faster.</p>
 
         <section className="flex justify-center items-center my-4">
         <Image src="/speed.png" alt="Performance" width={500} height={500} />
@@ -347,8 +361,8 @@ export default function Home() {
       <div className="flex flex-col gap-4 px-0 md:px-16 bg-black">
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
               <h2 className="text-2xl font-bold text-center text-white">Contributors</h2>
-              <p className="text-white text-center">AI Team at Decart</p>
-              <p className="text-white text-center">Etched: <a className="underline" href="">Julian Quevedo</a>, <a className="underline" href="">Quinn McIntyre</a>, <a className="underline" href="">Spruce Campbell</a>, <a className="underline" href="">Xinlei Chen</a>, <a className="underline" href="">Robert Wachen</a></p>
+              <p className="text-white text-center"><a className="underline" href="http://decart.ai/">Decart Team</a></p>
+              <p className="text-white text-center"><a className="underline" href="https://www.etched.com/">Etched</a>: <a className="underline" href="https://julian-q.github.io/">Julian Quevedo</a>, <a className="underline" href="https://www.linkedin.com/in/quinn-mcintyre/">Quinn McIntyre</a>, <a className="underline" href="https://www.linkedin.com/in/spruce-campbell-5a13061a6/">Spruce Campbell</a>, <a className="underline" href="https://xinleic.xyz/">Xinlei Chen</a>, <a className="underline" href="https://www.linkedin.com/in/robertwachen/">Robert Wachen</a></p>
               
         </div>
         </div>
