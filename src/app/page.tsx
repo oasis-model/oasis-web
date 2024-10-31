@@ -76,7 +76,7 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">Oasis takes in user keyboard input and generates gameplay in real-time - including physics, game rules and graphics. You can move around, jump, pick up items, and break blocks. There is no game engine behind any of this, just a foundation model.</p>
 
-        <p className="text-justify leading-relaxed">We can capture a complete universe with consistent physical laws in the weights of a transformer and all we need is scale. Fast transformer inference unlocks video as a usable interface. We&apos;re releasing the code, the weights of a 500M parameter model, and a live playable demo of a larger checkpoint.</p>
+        <p className="text-justify leading-relaxed">We can capture a complete universe with consistent physical laws in the weights of a transformer. Fast transformer inference unlocks video as a usable interface. We&apos;re releasing the code, the weights of a 500M parameter model, and a live playable demo of a larger checkpoint.</p>
 
         <h2 className="text-2xl font-bold text-center mt-8">Gameplay Results</h2>
 
