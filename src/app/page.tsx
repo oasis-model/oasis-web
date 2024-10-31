@@ -225,15 +225,15 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example, agents that can video call for education or medical care, or entertainment apps that can generate new shows and games at inference time.</p>
+        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example, rather than being controlled by actions, a game controlled completely by text, audio, or other modalities.</p>
           
         <h2 className="text-2xl font-bold text-center mt-8">Architecture</h2>
 
-        <p className="text-justify leading-relaxed">The model is composed of two parts: a spatial autoencoder, and a latent diffusion backbone. Both are Transformer-based: the autoencoder is based on ViT<sup className="text-gray-500">[1]</sup>, and the backbone is based on DiT<sup className="text-gray-500">[2]</sup>. We chose Transformers to ensure stable, predictable scaling, and fast inference on Etched&apos;s Transformer ASIC, Sohu.</p>
+        <p className="text-justify leading-relaxed">The model is composed of two parts: a spatial autoencoder, and a latent diffusion backbone. Both are Transformer-based: the autoencoder is based on ViT<sup className="text-gray-500">[1]</sup>, and the backbone is based on DiT<sup className="text-gray-500">[2]</sup>. Contrasting from recent action-conditioned world models such as Gamengen<sup className="text-gray-500">[3]</sup> and DIAMOND<sup className="text-gray-500">[4]</sup>, we chose Transformers to ensure stable, predictable scaling, and fast inference on Etched&apos;s Transformer ASIC, Sohu.</p>
 
         <Image src="/arch_new.png" alt="Architecture" width={1000} height={500} />
 
-        <p className="text-justify leading-relaxed">In contrast to bidirectional models such as Sora<sup className="text-gray-500">[3]</sup>, Oasis generates frames autoregressively, with the ability to condition each frame on game input. This enables users to interact with the world in real-time. The model was trained using Diffusion Forcing<sup className="text-gray-500">[4]</sup>, which denoises with independent per-token noise levels, and allows for novel decoding schemes such as ours.</p>
+        <p className="text-justify leading-relaxed">In contrast to bidirectional models such as Sora<sup className="text-gray-500">[5]</sup>, Oasis generates frames autoregressively, with the ability to condition each frame on game input. This enables users to interact with the world in real-time. The model was trained using Diffusion Forcing<sup className="text-gray-500">[6]</sup>, which denoises with independent per-token noise levels, and allows for novel decoding schemes such as ours.</p>
 
         <p className="text-justify leading-relaxed">One issue we focused on is temporal stability--making sure the model outputs make sense over long time horizons. In autoregressive models, errors compound, and small imperfections can quickly snowball into glitched frames. Solving this required innovations in long-context generation.</p>
 
@@ -273,7 +273,7 @@ export default function Home() {
           
         <h2 className="text-2xl font-bold text-center mt-8">Performance</h2>
 
-        <p className="text-justify leading-relaxed">Oasis generates real-time output in 20 frames per second. Current state-of-the-art text-to-video models with a similar DiT architecture (e.g. Sora<sup className="text-gray-500">[3]</sup>, Mochi-1<sup className="text-gray-500">[6]</sup> and Runway<sup className="text-gray-500">[7]</sup>) can take 10-20 seconds to create just one second of video, even on multiple GPUs. In order to match the experience of playing a game, however, our model must generate a new frame every 0.04 seconds, which is over 100x faster.</p>
+        <p className="text-justify leading-relaxed">Oasis generates real-time output in 20 frames per second. Current state-of-the-art text-to-video models with a similar DiT architecture (e.g. Sora<sup className="text-gray-500">[5]</sup>, Mochi-1<sup className="text-gray-500">[7]</sup> and Runway<sup className="text-gray-500">[8]</sup>) can take 10-20 seconds to create just one second of video, even on multiple GPUs. In order to match the experience of playing a game, however, our model must generate a new frame every 0.04 seconds, which is over 100x faster.</p>
 
         <section className="flex justify-center items-center my-4">
         <Image src="/speed.png" alt="Performance" width={500} height={500} />
@@ -350,11 +350,12 @@ export default function Home() {
         <div className="flex flex-col gap-4 p-8 sm:p-20 md:px-48 bg-secondary">
           <p className="text-justify text-sm text-secondary-foreground">[1]: <a className="underline" href="https://arxiv.org/abs/2010.11929">Dosovitskiy et al., An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></p>
           <p className="text-justify text-sm text-secondary-foreground">[2]: <a className="underline" href="https://arxiv.org/abs/2212.09748">Peebles et al., Scalable Diffusion Models with Transformers</a></p>
-          <p className="text-justify text-sm text-secondary-foreground">[3]: <a className="underline" href="https://openai.com/index/video-generation-models-as-world-simulators/">OpenAI, Video generation models as world simulators</a></p>
-          <p className="text-justify text-sm text-secondary-foreground">[4]: <a className="underline" href="https://arxiv.org/abs/2407.01392">Chen et al., Diffusion Forcing: Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion</a></p>
-          <p className="text-justify text-sm text-secondary-foreground">[5]: <a className="underline" href="https://arxiv.org/abs/2211.05102">Pope et al., Efficiently Scaling Transformer Inference</a></p>
-          <p className="text-justify text-sm text-secondary-foreground">[6]: <a className="underline" href="https://www.genmo.ai/blog">Genmo, Mochi 1: A new SOTA in open-source video generation models</a></p>
-          <p className="text-justify text-sm text-secondary-foreground">[7]: <a className="underline" href="https://runwayml.com/research/introducing-gen-3-alpha">Runway, Introducing Gen-3 Alpha: A New Frontier for Video Generation</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[3]: <a className="underline" href="https://arxiv.org/abs/2408.14837">Valevski et al., Diffusion Models Are Real-Time Game Engines</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[4]: <a className="underline" href="https://arxiv.org/abs/2405.12399">Alonso et al., Diffusion for World Modeling: Visual Details Matter in Atari</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[5]: <a className="underline" href="https://openai.com/index/video-generation-models-as-world-simulators/">OpenAI, Video generation models as world simulators</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[6]: <a className="underline" href="https://arxiv.org/abs/2407.01392">Chen et al., Diffusion Forcing: Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[7]: <a className="underline" href="https://www.genmo.ai/blog">Genmo, Mochi 1: A new SOTA in open-source video generation models</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[8]: <a className="underline" href="https://runwayml.com/research/introducing-gen-3-alpha">Runway, Introducing Gen-3 Alpha: A New Frontier for Video Generation</a></p>
           <p className="text-justify text-sm text-secondary-foreground">* Estimated throughput figures - Sora reported, Mochi-1 from FAL.AI endpoint adjusted for parameter count, Runway from Gen-3 reported throughput</p>
           </div>
 
