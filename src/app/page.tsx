@@ -183,8 +183,8 @@ export default function Home() {
               {[
                 {src: "/spacelike_dark_location.webp", caption: "Space-like dark location"},
                 {src: "/night_time.webp", caption: "Oasis renders at night"},
-                {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
-                {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"},
+                {src: "/placing_objects.webp", caption: "Placing a range of objects"},
+                {src: "/opening_chest.webp", caption: "Oasis lets users open inventory chests"},
                 {src: "/wandering_trader.webp", caption: "Exciting animals and NPCs"}
               ].map((item, index) => (
                 <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
@@ -287,7 +287,7 @@ export default function Home() {
                 {src: "/3_second_memory.webp", caption: "Limited memory over long horizons"},
                 {src: "/inventory_and_changing_hands.webp", caption: "Difficulty with precise inventory control"},
                 {src: "/block_becomes_fence.webp", caption: "Difficulty with precise object control"},
-                {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
+                {src: "/3.webp", caption: "Fuzziness of distant sand"}
               ].map((item, index) => (
                 <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
                   <div 
