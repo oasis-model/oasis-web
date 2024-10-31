@@ -76,44 +76,9 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">Oasis takes in user keyboard input and generates real-time gameplay, including physics, game rules, and graphics. You can move around, jump, pick up items, break blocks, and more. There is no game engine; just a foundation model.</p>
 
-        <p className="text-justify leading-relaxed">We believe fast transformer inference is the missing link to making generative video a reality. Today, using Decart's inference engine, we show that real-time video is possible. When Etched's transformer ASIC, Sohu, is released, we can run models like Oasis in 4K. Today, we&apos;re releasing Oasis's code, the weights of a 500M parameter model you can run locally, and a live playable demo of a larger checkpoint.</p>
+        <p className="text-justify leading-relaxed">We believe fast transformer inference is the missing link to making generative video a reality. Today, using Decart&apos;s inference engine, we show that real-time video is possible. When Etched&apos;s transformer ASIC, Sohu, is released, we can run models like Oasis in 4K. Today, we&apos;re releasing Oasis&apos;s code, the weights of a 500M parameter model you can run locally, and a live playable demo of a larger checkpoint.</p>
 
         <h2 className="text-2xl font-bold text-center mt-8">Gameplay Results</h2>
-
-        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
-            <CarouselContent>
-              {[
-                {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
-                {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
-                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
-                {src: "/2.webp", caption: "Interactive crafting system"},
-                {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
-              ].map((item, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
-                  <div className="flex flex-col items-center justify-center">
-                    <Image
-                      src={item.src}
-                      alt={item.caption}
-                      width={700}
-                      height={300}
-                      className="object-cover"
-                    />
-                    <p className="text-sm text-center p-2">{item.caption}</p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="static translate-y-0" />
-              <CarouselNext className="static translate-y-0" />
-            </div>
-          </Carousel>
-        </div>
-
-        <p className="text-justify leading-relaxed">Our model even understands complex game mechanics, such as crafting, and NPCs ADD MORE EXAMPLES.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
           <Carousel className="w-full" opts={{
@@ -133,6 +98,41 @@ export default function Home() {
                       />
                     </CardContent>
                   </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <p className="text-justify leading-relaxed">Our model even understands complex game mechanics, such as building, lighting physics, inventory management, object understanding, and more.</p>
+
+        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
+          <Carousel className="w-full" opts={{
+            loop: true
+          }}>
+            <CarouselContent>
+              {[
+                {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
+                {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
+                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
+                {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
+                {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"}
+              ].map((item, index) => (
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                  <div className="flex flex-col items-center justify-center">
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                    <p className="text-sm text-center p-2">{item.caption}</p>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -209,7 +209,7 @@ export default function Home() {
 
         <h2 className="text-2xl font-bold text-center mt-8">Future Explorations</h2>
 
-        <p className="text-justify leading-relaxed"> With the many exciting results, there come areas for future development in the model. There are difficulties with the sometimes fuzzy video in the distance, the temporal consistency of uncertain objects, domain generalization, and difficulties over long contexts.</p>
+        <p className="text-justify leading-relaxed"> With the many exciting results, there come areas for future development in the model. There are difficulties with the sometimes fuzzy video in the distance, the temporal consistency of uncertain objects, domain generalization, precise control over inventories, and difficulties over long contexts.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
           <Carousel className="w-full" opts={{
@@ -217,10 +217,10 @@ export default function Home() {
           }}>
             <CarouselContent>
               {[
-                {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
-                {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
-                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
-                {src: "/2.webp", caption: "Interactive crafting system"},
+                {src: "/colloseum.webp", caption: "Struggles with domain generalization"},
+                {src: "/3_second_memory.webp", caption: "Limited memory over long horizons"},
+                {src: "/inventory_and_changing_hands.webp", caption: "Difficulty with precise inventory control"},
+                {src: "/block_becomes_fence.webp", caption: "Difficulty with precise object control"},
                 {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
               ].map((item, index) => (
                 <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
@@ -246,6 +246,9 @@ export default function Home() {
 
         <h2 className="text-2xl font-bold text-center mt-8">What&apos;s Next</h2>
 
+        
+
+        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
         <ul className="list-disc list-inside">
           <li>Creating and editing game content on-the-fly, even while playing, through text and image prompting</li>
           <li>Generating content individually tailored for each user on social media</li>
@@ -254,6 +257,7 @@ export default function Home() {
         </ul>
         <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
         <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
+      </div>
 
       
 
