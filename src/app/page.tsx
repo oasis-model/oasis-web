@@ -109,8 +109,8 @@ export default function Home() {
           </a>
           <a
             className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center gap-2 hover:bg-[#ccc] dark:hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href=""
-            target="https://etched.com/blog-posts/oasis"
+            href="https://etched.com/blog-posts/oasis"
+            target="_blank"
             rel="noopener noreferrer"
           >
             <ArrowTopRightIcon className="w-4 h-4" />
