@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,12 +11,42 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlayIcon, ArrowTopRightIcon } from "@radix-ui/react-icons";
-
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{src: string, caption?: string} | null>(null);
+
+  const openImageModal = (src: string, caption?: string) => {
+    setSelectedImage({ src, caption });
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="">
-      <main className="flex flex-col gap-8  p-8 pb-20 gap-16 sm:p-20 md:px-48 ">
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="">
+          {selectedImage && (
+            <div className="flex flex-col items-center gap-4 p-6">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.caption || "Preview"}
+                width={500}
+                height={500}
+                className="object-cover"
+              />
+              {selectedImage.caption && (
+                <p className="text-center">{selectedImage.caption}</p>
+              )}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <main className="flex flex-col gap-8 p-8 pb-20 gap-16 sm:p-20 md:px-48">
         <div className="flex flex-col items-center gap-8">
         <h3>October 31, 2024</h3>
         <h1 className="text-5xl font-bold text-center">Oasis: A Universe in a Transformer</h1>
@@ -81,20 +114,18 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-center mt-8">Gameplay Results</h2>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {["/1.webp", "/2.webp", "/3.webp", "/4.webp", "/5.webp"].map((src, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
                   <Card>
-                    <CardContent className="flex items-center justify-center p-0">
+                    <CardContent className="flex items-center justify-center p-0 cursor-pointer" onClick={() => openImageModal(src)}>
                       <Image
                         src={src}
                         alt={`Carousel image ${index + 1}`}
                         width={700}
                         height={300}
-                        className="object-cover"
+                        className="object-cover hover:opacity-90 transition-opacity"
                       />
                     </CardContent>
                   </Card>
@@ -111,9 +142,7 @@ export default function Home() {
         <p className="text-justify leading-relaxed">Our model even understands complex game mechanics, such as building, lighting physics, inventory management, object understanding, and more.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {[
                 {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
@@ -122,14 +151,17 @@ export default function Home() {
                 {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
                 {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"}
               ].map((item, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
-                  <div className="flex flex-col items-center justify-center">
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
+                  <div 
+                    className="flex flex-col items-center justify-center cursor-pointer"
+                    onClick={() => openImageModal(item.src, item.caption)}
+                  >
                     <Image
                       src={item.src}
                       alt={item.caption}
                       width={700}
                       height={300}
-                      className="object-cover"
+                      className="object-cover hover:opacity-90 transition-opacity"
                     />
                     <p className="text-sm text-center p-2">{item.caption}</p>
                   </div>
@@ -146,25 +178,26 @@ export default function Home() {
         <p className="text-justify leading-relaxed">Oasis outputs a diverse range of settings, locations, and objects.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {[
                 {src: "/spacelike_dark_location.webp", caption: "Space-like dark location"},
                 {src: "/night_time.webp", caption: "Oasis renders at night"},
-                {src: "/wandering_trader.webp", caption: "Exciting animals and NPCs"},
                 {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
-                {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"}
+                {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"},
+                {src: "/wandering_trader.webp", caption: "Exciting animals and NPCs"}
               ].map((item, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
-                  <div className="flex flex-col items-center justify-center">
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
+                  <div 
+                    className="flex flex-col items-center justify-center cursor-pointer"
+                    onClick={() => openImageModal(item.src, item.caption)}
+                  >
                     <Image
                       src={item.src}
                       alt={item.caption}
                       width={700}
                       height={300}
-                      className="object-cover"
+                      className="object-cover hover:opacity-90 transition-opacity"
                     />
                     <p className="text-sm text-center p-2">{item.caption}</p>
                   </div>
@@ -176,9 +209,6 @@ export default function Home() {
               <CarouselNext className="static translate-y-0" />
             </div>
           </Carousel>
-
-
-         
         </div>
 
         <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example, agents that can video call for education or medical care, or entertainment apps that can generate new shows and games at inference time.</p>
@@ -202,20 +232,18 @@ export default function Home() {
         <p className="text-justify leading-relaxed">To learn more about the engineering underlying this model, and some of the specific optimizations in training and inference, check out the <a className="underline" href="https://decart.ai/blog/training-the-world-model">Decart blog post</a>.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {["/5.webp", "/4.webp", "/1.webp", "/2.webp", "/3.webp"].map((src, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
                   <Card>
-                    <CardContent className="flex items-center justify-center p-0">
+                    <CardContent className="flex items-center justify-center p-0 cursor-pointer" onClick={() => openImageModal(src)}>
                       <Image
                         src={src}
                         alt={`Carousel image ${index + 1}`}
                         width={700}
                         height={300}
-                        className="object-cover"
+                        className="object-cover hover:opacity-90 transition-opacity"
                       />
                     </CardContent>
                   </Card>
@@ -252,9 +280,7 @@ export default function Home() {
         <p className="text-justify leading-relaxed"> With the many exciting results, there come areas for future development in the model. There are difficulties with the sometimes fuzzy video in the distance, the temporal consistency of uncertain objects, domain generalization, precise control over inventories, and difficulties over long contexts.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
-          <Carousel className="w-full" opts={{
-            loop: true
-          }}>
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {[
                 {src: "/colloseum.webp", caption: "Struggles with domain generalization"},
@@ -263,14 +289,17 @@ export default function Home() {
                 {src: "/block_becomes_fence.webp", caption: "Difficulty with precise object control"},
                 {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
               ].map((item, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
-                  <div className="flex flex-col items-center justify-center">
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
+                  <div 
+                    className="flex flex-col items-center justify-center cursor-pointer"
+                    onClick={() => openImageModal(item.src, item.caption)}
+                  >
                     <Image
                       src={item.src}
                       alt={item.caption}
                       width={700}
                       height={300}
-                      className="object-cover"
+                      className="object-cover hover:opacity-90 transition-opacity"
                     />
                     <p className="text-sm text-center p-2">{item.caption}</p>
                   </div>
