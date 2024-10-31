@@ -248,7 +248,7 @@ export default function Home() {
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
           <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
-              {["/5.webp", "/4.webp", "/1.webp", "/2.webp", "/3.webp"].map((src, index) => (
+              {["/strange_falling.webp", "/weird_hill_mine.webp", "/underwater.webp", "/falling_mine.webp", "/water_mine.webp"].map((src, index) => (
                 <CarouselItem key={index} className="basis-1/2 md:basis-1/4">
                   <Card>
                     <CardContent className="flex items-center justify-center p-0 cursor-pointer" onClick={() => openImageModal(src)}>
