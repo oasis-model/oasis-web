@@ -70,7 +70,7 @@ export default function Home() {
 
         <a
             className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center gap-2 hover:bg-[#ccc] dark:hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href=""
+            href="http://www.decart.ai/articles/oasis-interactive-ai-video-game-model"
             target="_blank"
             rel="noopener noreferrer"
           >
