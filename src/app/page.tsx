@@ -155,8 +155,6 @@ export default function Home() {
         <Image src="/dyno.png" alt="Dynamic Noising" width={700} height={500} />
         </div>
 
-        <p className="text-justify leading-relaxed">Key to our success was tuning our training recipe—optimizing batch sizes, hyperparameters, learning rate schedules, and architectures. On the systems side, we leveraged distributed storage to clear data bottlenecks, accelerated NCCL communications, and fused CUDA kernels, resulting in 10x faster training, enabling rapid model iterations.</p>
-
         <p className="text-justify leading-relaxed">To learn more about the engineering underlying this model, and some of the specific optimizations in training and inference, check out the <a className="underline" href="https://decart.ai/blog/training-the-world-model">Decart blog post</a>.</p>
 
         <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
