@@ -347,8 +347,8 @@ export default function Home() {
       <div className="flex flex-col gap-4 px-0 md:px-16 bg-black">
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
               <h2 className="text-2xl font-bold text-center text-white">Contributors</h2>
-              <p className="text-white text-center">Decart Team</p>
-              <p className="text-white text-center">Etched: <a className="underline" href="">Julian Quevedo</a>, <a className="underline" href="">Quinn McIntyre</a>, <a className="underline" href="">Spruce Campbell</a>, <a className="underline" href="">Xinlei Chen</a>, <a className="underline" href="">Robert Wachen</a></p>
+              <p className="text-white text-center"><a className="underline" href="http://decart.ai/">Decart Team</a></p>
+              <p className="text-white text-center"><a className="underline" href="https://www.etched.com/">Etched</a>: <a className="underline" href="https://julian-q.github.io/">Julian Quevedo</a>, <a className="underline" href="https://www.linkedin.com/in/quinn-mcintyre/">Quinn McIntyre</a>, <a className="underline" href="https://www.linkedin.com/in/spruce-campbell-5a13061a6/">Spruce Campbell</a>, <a className="underline" href="https://xinleic.xyz/">Xinlei Chen</a>, <a className="underline" href="https://www.linkedin.com/in/robertwachen/">Robert Wachen</a></p>
               
         </div>
         </div>
