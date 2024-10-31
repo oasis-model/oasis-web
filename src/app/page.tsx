@@ -109,7 +109,7 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">Oasis takes in user keyboard input and generates real-time gameplay, including physics, game rules, and graphics. You can move around, jump, pick up items, break blocks, and more. There is no game engine; just a foundation model.</p>
 
-        <p className="text-justify leading-relaxed">We believe fast transformer inference is the missing link to making generative video a reality. Today, using Decart&apos;s inference engine, we show that real-time video is possible. When Etched&apos;s transformer ASIC, Sohu, is released, we can run models like Oasis in 4K. Today, we&apos;re releasing Oasis&apos;s code, the weights of a 500M parameter model you can run locally, and a live playable demo of a larger checkpoint.</p>
+        <p className="text-justify leading-relaxed">We believe fast transformer inference is the missing link to making generative video a reality. Using Decart&apos;s inference engine, we show that real-time video is possible. When Etched&apos;s transformer ASIC, Sohu, is released, we can run models like Oasis in 4K. Today, we&apos;re releasing Oasis&apos;s code, the weights of a 500M parameter model you can run locally, and a live playable demo of a larger checkpoint.</p>
 
         <h2 className="text-2xl font-bold text-center mt-8">Gameplay Results</h2>
 
