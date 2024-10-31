@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8">
         <h3>October 31, 2024</h3>
         <h1 className="text-5xl font-bold text-center">Oasis: A Universe in a Transformer</h1>
-        <h2 className="mt-[-20px] text-center mb-8"><a className="underline" href="https://etched.ai">Decart Team</a>, <a className="underline" href="https://decart.ai">Etched Team</a></h2>
+        <h2 className="mt-[-20px] text-center mb-8"><a className="underline" href="https://decart.ai">Decart</a>, <a className="underline" href="https://etched.ai">Etched</a></h2>
         <video src="/wide1.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
 
         <div className="flex flex-col items-center justify-center gap-4 w-full md:w-1/2">
@@ -217,7 +217,7 @@ export default function Home() {
           <li>AI teachers, who can generate videos to respond to students in a classroom</li>
         </ul>
         <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
-        <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. [If you&apos;re interested in partnering, reach out to @decart.ai]</p>
+        <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
       </div>
 
       
