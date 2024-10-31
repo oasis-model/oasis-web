@@ -56,8 +56,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-4 w-full md:w-1/2">
         <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-14 sm:h-16 px-4 sm:px-5 w-56"
-            href=""
-            target="_blank"
+            href="https://oasis.decart.ai/welcome"
             rel="noopener noreferrer"
           >
             <PlayIcon className="w-4 h-4" />
