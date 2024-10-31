@@ -199,7 +199,7 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">With Decart&apos;s inference stack, the model runs at playable framerates, unlocking real-time interactivity for the first time. Read more about it on <a className="underline" href="https://decart.ai/blog/training-the-world-model">Decart&apos;s blog</a>.</p>
 
-        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. On NVIDIA H100s today, the model can run at 720p at 20fps. Sohu can run the same model at up to 4K, which is 4x more tokens per second. </p>
+        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. On NVIDIA H100s today, the model can run at 360p at 20fps. Sohu can run the same model at up to 4K. </p>
 
         <p className="text-justify leading-relaxed">In addition, Oasis&apos; end-to-end Transformer architecture makes it extremely efficient on Sohu - at the same price and power consumption as an H100 GPU, Oasis on Sohu can serve 10x more users. We believe the price of serving models like Oasis is the hidden bottleneck to releasing generative video in production. See more performance figures and read more about Oasis and Sohu on <a className="underline" href="https://etched.ai/blog">Etched&apos;s blog</a>.</p>
 
@@ -211,10 +211,9 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
         <ul className="list-disc list-inside">
-          <li>Creating and editing game content on-the-fly, even while playing, through text and image prompting</li>
-          <li>Generating content individually tailored for each user on social media</li>
-          <li>Real-time medical care, able to respond on the fly to patients in a video call</li>
-          <li>AI teachers, who can generate videos to respond to students in a classroom</li>
+          <li>Creating and editing game content mid-game, through text and image prompting</li>
+          <li>Generating individually personalized content on social media</li>
+          <li>AI teachers, who can generate interactive demos to respond to students in a classroom</li>
         </ul>
         <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
         <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
