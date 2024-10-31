@@ -327,8 +327,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <h2 className="text-2xl font-bold text-center mt-8">What&apos;s Next</h2>
-
+        <p className="text-justify leading-relaxed">Following an in-depth sensitivity analysis on different configurations of the architecture alongside the data and model size, we hypothesize that the majority of these aspects may be addressed through scaling of the model and the datasets. Therefore, we are currently developing this direction alongside additional optimization techniques in order to enable such large-scale training efficiently. Further, once these larger models are developed, new breakthroughs in inferencing technology would be required in order to ensure a sustainable latency and cost trade-off. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a> and <a href="mailto:robert@etched.com">robert@etched.com</a>.</p>
         
 
         {/* <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
@@ -338,8 +337,7 @@ export default function Home() {
           <li>Real-time medical care, able to respond on the fly to patients in a video call</li>
           <li>AI teachers, who can generate videos to respond to students in a classroom</li>
         </ul> */}
-        <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
-        <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
+
       </div>
 
       
