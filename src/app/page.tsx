@@ -118,7 +118,42 @@ export default function Home() {
               {[
                 {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
                 {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
-                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
+                {src: "/pig_mines.webp", caption: "Interacting with animals"},
+                {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
+                {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"}
+              ].map((item, index) => (
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                  <div className="flex flex-col items-center justify-center">
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                    <p className="text-sm text-center p-2">{item.caption}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <p className="text-justify leading-relaxed">Oasis outputs a diverse range of settings, locations, and objects.</p>
+
+        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
+          <Carousel className="w-full" opts={{
+            loop: true
+          }}>
+            <CarouselContent>
+              {[
+                {src: "/spacelike_dark_location.webp", caption: "Space-like dark location"},
+                {src: "/night_time.webp", caption: "Oasis renders at night"},
+                {src: "/wandering_trader.webp", caption: "Exciting animals and NPCs"},
                 {src: "/health_up_eating.webp", caption: "Recovering health when eating"},
                 {src: "/shovel_is_faster.webp", caption: "Shovel is faster than hands"}
               ].map((item, index) => (
