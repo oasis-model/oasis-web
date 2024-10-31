@@ -239,7 +239,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
               <h2 className="text-2xl font-bold text-center text-white">Contributors</h2>
               <p className="text-white text-center">AI Team at Decart</p>
-              <p className="text-white text-center">Etched: <a className="underline" href="">Julian Quevedo</a>, <a className="underline" href="">Quinn McIntyre</a>, <a className="underline" href="">Spruce Campbell</a>, <a className="underline" href="">Xinlei Chen</a>, <a className="underline" href="">Robert Wachen</a></p>
+              <p className="text-white text-center">Etched: <a className="underline" href="https://www.linkedin.com/in/julian-q/">Julian Quevedo</a>, <a className="underline" href="https://www.linkedin.com/in/quinn-mcintyre/">Quinn McIntyre</a>, <a className="underline" href="https://www.linkedin.com/in/spruce-campbell-5a13061a6/">Spruce Campbell</a>, <a className="underline" href="https://www.linkedin.com/in/xinlei-chen-623b6a22/">Xinlei Chen (Meta)</a>, <a className="underline" href="https://linkedin.com/in/robertwachen">Robert Wachen</a></p>
               
         </div>
         </div>
