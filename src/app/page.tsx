@@ -141,7 +141,12 @@ export default function Home() {
               <CarouselNext className="static translate-y-0" />
             </div>
           </Carousel>
+
+
+         
         </div>
+
+        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example, agents that can video call for education or medical care, or entertainment apps that can generate new shows and games at inference time.</p>
           
         <h2 className="text-2xl font-bold text-center mt-8">Architecture</h2>
 
@@ -248,13 +253,13 @@ export default function Home() {
 
         
 
-        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
+        {/* <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
         <ul className="list-disc list-inside">
           <li>Creating and editing game content on-the-fly, even while playing, through text and image prompting</li>
           <li>Generating content individually tailored for each user on social media</li>
           <li>Real-time medical care, able to respond on the fly to patients in a video call</li>
           <li>AI teachers, who can generate videos to respond to students in a classroom</li>
-        </ul>
+        </ul> */}
         <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
         <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
       </div>
