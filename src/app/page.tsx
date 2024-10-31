@@ -347,7 +347,7 @@ export default function Home() {
       <div className="flex flex-col gap-4 px-0 md:px-16 bg-black">
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
               <h2 className="text-2xl font-bold text-center text-white">Contributors</h2>
-              <p className="text-white text-center">AI Team at Decart</p>
+              <p className="text-white text-center">Decart Team</p>
               <p className="text-white text-center">Etched: <a className="underline" href="">Julian Quevedo</a>, <a className="underline" href="">Quinn McIntyre</a>, <a className="underline" href="">Spruce Campbell</a>, <a className="underline" href="">Xinlei Chen</a>, <a className="underline" href="">Robert Wachen</a></p>
               
         </div>
