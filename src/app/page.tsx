@@ -229,7 +229,7 @@ export default function Home() {
           
         <h2 className="text-2xl font-bold text-center mt-8">Architecture</h2>
 
-        <p className="text-justify leading-relaxed">The model is composed of two parts: a spatial autoencoder, and a latent diffusion backbone. Both are Transformer-based: the autoencoder is based on ViT<sup className="text-gray-500">[1]</sup>, and the backbone is based on DiT<sup className="text-gray-500">[2]</sup>. Contrasting from recent action-conditioned world models such as Gamengen<sup className="text-gray-500">[3]</sup> and DIAMOND<sup className="text-gray-500">[4]</sup>, we chose Transformers to ensure stable, predictable scaling, and fast inference on Etched&apos;s Transformer ASIC, Sohu.</p>
+        <p className="text-justify leading-relaxed">The model is composed of two parts: a spatial autoencoder, and a latent diffusion backbone. Both are Transformer-based: the autoencoder is based on ViT<sup className="text-gray-500">[1]</sup>, and the backbone is based on DiT<sup className="text-gray-500">[2]</sup>. Contrasting from recent action-conditioned world models such as GameNGen<sup className="text-gray-500">[3]</sup> and DIAMOND<sup className="text-gray-500">[4]</sup>, we chose Transformers to ensure stable, predictable scaling, and fast inference on Etched&apos;s Transformer ASIC, Sohu.</p>
 
         <Image src="/arch_new.png" alt="Architecture" width={1000} height={500} />
 
