@@ -199,7 +199,7 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">With Decart&apos;s inference stack, the model runs at playable framerates, unlocking real-time interactivity for the first time. Read more about it on <a className="underline" href="https://decart.ai/blog/training-the-world-model">Decart&apos;s blog</a>.</p>
 
-        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. On NVIDIA H100s today, the model can run at 360p at 20fps. Sohu can run the same model at up to 4K. </p>
+        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. On NVIDIA H100s today, the model can run at 720p at 20fps. Sohu can run the same model at up to 4K, which is 4x more tokens per second. </p>
 
         <p className="text-justify leading-relaxed">In addition, Oasis&apos; end-to-end Transformer architecture makes it extremely efficient on Sohu - at the same price and power consumption as an H100 GPU, Oasis on Sohu can serve 10x more users. We believe the price of serving models like Oasis is the hidden bottleneck to releasing generative video in production. See more performance figures and read more about Oasis and Sohu on <a className="underline" href="https://etched.ai/blog">Etched&apos;s blog</a>.</p>
 
@@ -209,15 +209,51 @@ export default function Home() {
 
         <h2 className="text-2xl font-bold text-center mt-8">Future Explorations</h2>
 
-        <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
+        <p className="text-justify leading-relaxed"> With the many exciting results, there come areas for future development in the model. There are difficulties with the sometimes fuzzy video in the distance, the temporal consistency of uncertain objects, domain generalization, and difficulties over long contexts.</p>
+
+        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] my-4">
+          <Carousel className="w-full" opts={{
+            loop: true
+          }}>
+            <CarouselContent>
+              {[
+                {src: "/placing_4_fences.webp", caption: "Placing non-cube blocks"},
+                {src: "/torch_becomes_dark.webp", caption: "Model understands lighting physics"},
+                {src: "/inventory_and_changing_hands.webp", caption: "Real-time block manipulation"},
+                {src: "/2.webp", caption: "Interactive crafting system"},
+                {src: "/3.webp", caption: "AI-driven NPCs and wildlife"}
+              ].map((item, index) => (
+                <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
+                  <div className="flex flex-col items-center justify-center">
+                    <Image
+                      src={item.src}
+                      alt={item.caption}
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                    <p className="text-sm text-center p-2">{item.caption}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <h2 className="text-2xl font-bold text-center mt-8">What&apos;s Next</h2>
+
         <ul className="list-disc list-inside">
-          <li>Creating and editing game content mid-game, through text and image prompting</li>
-          <li>Generating individually personalized content on social media</li>
-          <li>AI teachers, who can generate interactive demos to respond to students in a classroom</li>
+          <li>Creating and editing game content on-the-fly, even while playing, through text and image prompting</li>
+          <li>Generating content individually tailored for each user on social media</li>
+          <li>Real-time medical care, able to respond on the fly to patients in a video call</li>
+          <li>AI teachers, who can generate videos to respond to students in a classroom</li>
         </ul>
         <p className="text-justify leading-relaxed">Oasis is the first in a series of world generation models - we&apos;re scaling our dataset and architecture by 10x each, and we&apos;re excited to report our findings soon.</p>
         <p className="text-justify leading-relaxed">Etched and Decart are excited to build these models together. The integration of Oasis with our hardware and software, from architecture to production, will ensure this model family remains one of the fastest and best as we advance the frontier of world generation. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a></p>
-      </div>
 
       
 
@@ -239,7 +275,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
               <h2 className="text-2xl font-bold text-center text-white">Contributors</h2>
               <p className="text-white text-center">AI Team at Decart</p>
-              <p className="text-white text-center">Etched: <a className="underline" href="https://www.linkedin.com/in/julian-q/">Julian Quevedo</a>, <a className="underline" href="https://www.linkedin.com/in/quinn-mcintyre/">Quinn McIntyre</a>, <a className="underline" href="https://www.linkedin.com/in/spruce-campbell-5a13061a6/">Spruce Campbell</a>, <a className="underline" href="https://www.linkedin.com/in/xinlei-chen-623b6a22/">Xinlei Chen (Meta)</a>, <a className="underline" href="https://linkedin.com/in/robertwachen">Robert Wachen</a></p>
+              <p className="text-white text-center">Etched: <a className="underline" href="">Julian Quevedo</a>, <a className="underline" href="">Quinn McIntyre</a>, <a className="underline" href="">Spruce Campbell</a>, <a className="underline" href="">Xinlei Chen</a>, <a className="underline" href="">Robert Wachen</a></p>
               
         </div>
         </div>
