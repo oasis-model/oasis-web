@@ -281,9 +281,9 @@ export default function Home() {
 
         <p className="text-justify leading-relaxed">With Decart&apos;s inference stack, the model runs at playable framerates, unlocking real-time interactivity for the first time. Read more about it on <a className="underline" href="https://decart.ai/blog/training-the-world-model">Decart&apos;s blog</a>.</p>
 
-        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. On NVIDIA H100s today, the model can run at 720p at 20fps. Sohu can run the same model at up to 4K, which is 4x more tokens per second. </p>
+        <p className="text-justify leading-relaxed">However, to make the model an additional order of magnitude faster, and make it cost-efficient to run at scale, new hardware is needed. Oasis is optimized for Sohu, the Transformer ASIC built by Etched. Sohu can scale to massive 100B+ next-generation models in 4K resolution.</p>
 
-        <p className="text-justify leading-relaxed">In addition, Oasis&apos; end-to-end Transformer architecture makes it extremely efficient on Sohu - at the same price and power consumption as an H100 GPU, Oasis on Sohu can serve 10x more users. We believe the price of serving models like Oasis is the hidden bottleneck to releasing generative video in production. See more performance figures and read more about Oasis and Sohu on <a className="underline" href="https://etched.ai/blog">Etched&apos;s blog</a>.</p>
+        <p className="text-justify leading-relaxed">In addition, Oasis' end-to-end Transformer architecture makes it extremely efficient on Sohu, which can serve >10x more users even on 100B+ parameter models. We believe the price of serving models like Oasis is the hidden bottleneck to releasing generative video in production. See more performance figures and read more about Oasis and Sohu on <a className="underline" href="https://etched.ai/blog">Etched&apos;s blog</a>.</p>
 
         <section className="flex justify-center items-center my-4">
         <Image src="/sohu.png" alt="Performance" width={500} height={500} />
