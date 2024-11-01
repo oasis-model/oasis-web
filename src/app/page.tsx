@@ -232,7 +232,7 @@ export default function Home() {
 
         <Image src="/arch_new.png" alt="Architecture" width={1000} height={500} />
 
-        <p className="text-justify leading-relaxed">In contrast to bidirectional models such as Sora<sup className="text-gray-500">[5]</sup>, Oasis generates frames autoregressively, with the ability to condition each frame on game input. This enables users to interact with the world in real-time. The model was trained using Diffusion Forcing<sup className="text-gray-500">[6]</sup>, which denoises with independent per-token noise levels, and allows for novel decoding schemes such as ours.</p>
+        <p className="text-justify leading-relaxed">In contrast to bidirectional models such as Sora<sup className="text-gray-500">[5]</sup>, Oasis generates frames autoregressively, with the ability to condition each frame on game input. This enables users to interact with the world in real-time. The model was trained using Diffusion Forcing<sup className="text-gray-500">[6]</sup>, which denoises with independent per-token noise levels, and allows for novel decoding schemes such as ours. We train on a subset of open-source Minecraft video data collected by OpenAI<sup className="text-gray-500">[9]</sup>.</p>
 
         <p className="text-justify leading-relaxed">One issue we focused on is temporal stability--making sure the model outputs make sense over long time horizons. In autoregressive models, errors compound, and small imperfections can quickly snowball into glitched frames. Solving this required innovations in long-context generation.</p>
 
@@ -353,6 +353,7 @@ export default function Home() {
           <p className="text-justify text-sm text-secondary-foreground">[6]: <a className="underline" href="https://arxiv.org/abs/2407.01392">Chen et al., Diffusion Forcing: Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion</a></p>
           <p className="text-justify text-sm text-secondary-foreground">[7]: <a className="underline" href="https://www.genmo.ai/blog">Genmo, Mochi 1: A new SOTA in open-source video generation models</a></p>
           <p className="text-justify text-sm text-secondary-foreground">[8]: <a className="underline" href="https://runwayml.com/research/introducing-gen-3-alpha">Runway, Introducing Gen-3 Alpha: A New Frontier for Video Generation</a></p>
+          <p className="text-justify text-sm text-secondary-foreground">[9]: <a className="underline" href="https://arxiv.org/abs/2206.11795">Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos</a></p>
           <p className="text-justify text-sm text-secondary-foreground">* Estimated throughput figures - Sora reported, Mochi-1 from FAL.AI endpoint adjusted for parameter count, Runway from Gen-3 reported throughput</p>
           </div>
 
