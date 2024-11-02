@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { PlayIcon, ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { PlayIcon, ArrowTopRightIcon, CopyIcon } from "@radix-ui/react-icons";
 import {
   Dialog,
   DialogContent,
@@ -326,7 +326,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <p className="text-justify leading-relaxed">Following an in-depth sensitivity analysis on different configurations of the architecture alongside the data and model size, we hypothesize that the majority of these aspects may be addressed through scaling of the model and the datasets. Therefore, we are currently developing this direction alongside additional optimization techniques in order to enable such large-scale training efficiently. Further, once these larger models are developed, new breakthroughs in inferencing technology would be required in order to ensure a sustainable latency and cost trade-off. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai">tal@decart.ai</a> and <a href="mailto:robert@etched.com">robert@etched.com</a>.</p>
+        <p className="text-justify leading-relaxed">Following an in-depth sensitivity analysis on different configurations of the architecture alongside the data and model size, we hypothesize that the majority of these aspects may be addressed through scaling of the model and the datasets. Therefore, we are currently developing this direction alongside additional optimization techniques in order to enable such large-scale training efficiently. Further, once these larger models are developed, new breakthroughs in inferencing technology would be required in order to ensure a sustainable latency and cost trade-off. If you&apos;re interested in collaborating, reach out to <a href="mailto:tal@decart.ai" className="underline text-blue-500">tal@decart.ai</a> and <a href="mailto:robert@etched.com" className="underline text-blue-500">robert@etched.com</a>.</p>
         
 
         {/* <p className="text-justify leading-relaxed">Oasis is an impressive technical demo, but we believe this research will enable an exciting new generation of foundation models and consumer products. For example:</p>
@@ -343,6 +343,7 @@ export default function Home() {
 
 
         </main>
+       
 
         <div className="flex flex-col gap-4 p-8 sm:p-20 md:px-48 bg-secondary">
           <p className="text-justify text-sm text-secondary-foreground">[1]: <a className="underline" href="https://arxiv.org/abs/2010.11929">Dosovitskiy et al., An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></p>
@@ -356,6 +357,37 @@ export default function Home() {
           <p className="text-justify text-sm text-secondary-foreground">[9]: <a className="underline" href="https://arxiv.org/abs/2206.11795">Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos</a></p>
           <p className="text-justify text-sm text-secondary-foreground">* Estimated throughput figures - Sora reported, Mochi-1 from FAL.AI endpoint adjusted for parameter count, Runway from Gen-3 reported throughput</p>
           </div>
+
+          <div className="flex flex-col gap-4 p-12 md:px-64 bg-secondary my-4 relative group">
+          <h2 className="text-2xl font-bold text-center">BibTeX</h2>
+          <p className="text-center">If you'd like to reference Oasis in your work, please cite it as:</p>
+          <div className="relative">
+            <p className="text-left text-sm font-mono p-4 bg-background whitespace-pre overflow-clip text-wrap">
+              {"@article{oasis2024,"}
+              <br />
+              {"  author    = {Decart and Julian Quevedo, Quinn McIntyre, Spruce Campbell, Robert Wachen},"}
+              <br />
+              {"  title     = {Oasis: A Universe in a Transformer},"}
+              <br />
+              {"  year      = {2024},"}
+              <br />
+              {"  url       = {https://oasis-model.github.io/}"}
+              <br />
+              {"}"}
+            </p>
+            <button 
+              className="absolute top-2 right-2 p-1 bg-background text-white hover:bg-gray-600 transition-colors group-hover:opacity-100"
+              onClick={() => navigator.clipboard.writeText(`@article{oasis2024,
+  author    = {Decart and Julian Quevedo, Quinn McIntyre, Spruce Campbell, Robert Wachen},
+  title     = {Oasis: A Universe in a Transformer},
+  year      = {2024},
+  url       = {https://oasis-model.github.io/}
+}`)}
+            >
+              <CopyIcon className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
 
       <div className="flex flex-col gap-4 px-0 md:px-16 bg-black">
         <div className="flex flex-col gap-4 p-8 pb-20 gap-16 sm:p-20 md:px-48">
