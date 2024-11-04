@@ -360,12 +360,12 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 p-12 md:px-64 bg-secondary my-4 relative group">
           <h2 className="text-2xl font-bold text-center">BibTeX</h2>
-          <p className="text-center">If you'd like to reference Oasis in your work, please cite it as:</p>
+          <p className="text-center">If you&apos;d like to reference Oasis in your work, please cite it as:</p>
           <div className="relative">
             <p className="text-left text-sm font-mono p-4 bg-background whitespace-pre overflow-clip text-wrap">
               {"@article{oasis2024,"}
               <br />
-              {"  author    = {Decart and Julian Quevedo, Quinn McIntyre, Spruce Campbell, Robert Wachen},"}
+              {"  author    = {Decart and Julian Quevedo, Quinn McIntyre, Spruce Campbell, Xinlei Chen, Robert Wachen},"}
               <br />
               {"  title     = {Oasis: A Universe in a Transformer},"}
               <br />
